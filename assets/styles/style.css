@@ -22,10 +22,7 @@
   color: light-dark(var(--light-color), var(--dark-color));
 }
 
-/* @media (min-width: 480px) {
-
-
-} */
+@media (max-width: 900px) {
 .light {
   /* forces light color-scheme */
    display: flex;
@@ -34,7 +31,8 @@
     flex-direction: column;
   color-scheme: light;
   width: 100%;
-  height: 600px; 
+  height: auto; 
+  padding: 3rem;
 }
 .dark {
   /* forces dark color-scheme */
@@ -44,7 +42,8 @@
     flex-direction: column;
   color-scheme: dark;
     width: 100%;
-  height: 600px;
+  height: auto;
+    padding: 3rem;
 
 }
 
@@ -56,7 +55,544 @@ nav {
     align-items: center;
     width: 100%;
     height: 50px;
-   background-color: rgb(14, 13, 13, 0.6);
+   background-color: rgba(36, 33, 33, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* höher als Hero */
+    transition: background-color 0.3s ease; /* sanfter Übergang */
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    background-color: transparent;
+}
+
+li {
+    list-style: none;
+    background-color: transparent;
+}
+
+a, p {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+h2 {
+  font-size: 28px;
+}
+
+section.hero {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden !important;
+    background-color: transparent;
+}
+
+/* Hero-Bild */
+img.heroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;   /* ganz wichtig */
+  object-fit: cover;
+  object-position: center center;
+    filter: brightness(70%);
+}
+
+
+.heroTitle {
+    width: 70%;
+    font-size: 30px;
+    z-index: 2;
+    color: #F7F4EA;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ opacity: 90%;
+}
+
+.heroButtons {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 3rem;
+    background-color: transparent;
+}
+
+a.btn {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--dark-bg);
+    color: var(--dark-color);
+  border-radius: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+
+.container {
+  width: 100%;
+   display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3rem; 
+    background-color: transparent;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; 
+    gap: 3rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+.contentImg {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    gap: 3rem;
+    background-color: transparent;
+   
+}
+
+.contentIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 3rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+img.icon {
+  width: 100px;
+  height: auto;
+}
+
+img.contentImg {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+   
+}
+
+.containerImg {
+ width: 100%;
+ height: 200px;
+ border: none;
+border-radius: 40px 0px 40px 40px;
+overflow: hidden;
+}
+
+.container3 {
+  width: 100%;
+   display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6rem; 
+    background-color: transparent;
+}
+
+.container4 {
+  width: 100%;
+   display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3rem; 
+    background-color: transparent;
+}
+
+
+
+.container2 {
+  width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem; 
+    background-color: transparent;
+
+ 
+}
+
+.banner {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+display: none;
+}
+
+.bannerImg {
+  display: none;
+/*   width: 100%;
+  height: auto;
+object-fit: cover;
+ object-position: center; */
+}
+
+.footerNav {
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+
+
+small {
+  margin-top: 2rem;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+.light {
+  /* forces light color-scheme */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  color-scheme: light;
+  width: 100%;
+  height: auto; 
+  padding: 4rem;
+}
+.dark {
+  /* forces dark color-scheme */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  color-scheme: dark;
+    width: 100%;
+  height: auto;
+    padding: 4rem;
+
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+   background-color: rgba(36, 33, 33, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* höher als Hero */
+    transition: background-color 0.3s ease; /* sanfter Übergang */
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    background-color: transparent;
+}
+
+li {
+    list-style: none;
+    background-color: transparent;
+}
+
+a, p {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+h2 {
+  font-size: 30px;
+}
+
+section.hero {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Hero-Bild */
+img.heroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+    filter: brightness(70%);
+}
+
+
+.heroTitle {
+    width: 70%;
+    font-size: 70px;
+    z-index: 2;
+    color: #F7F4EA;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ opacity: 90%;
+}
+
+.heroButtons {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 3rem;
+    background-color: transparent;
+}
+
+a.btn {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--dark-bg);
+    color: var(--dark-color);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: var(--light-bg);
+  color: var(--light-color);
+}
+
+
+.container {
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center; 
+    align-items: center;
+    gap: 4rem; 
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; 
+    gap: 2rem;
+    background-color: transparent;
+}
+
+.contentImg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    flex-direction: column;
+    gap: 2rem;
+    background-color: transparent;
+   
+}
+
+.contentIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 2rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+img.icon {
+  width: 110px;
+  height: auto;
+}
+
+img.contentImg {
+    width: 500px;
+    height: auto;
+   
+}
+.containerImg {
+ width: 500px;
+ height: 300px;
+ border: none;
+border-radius: 40px 0px 40px 40px;
+overflow: hidden;
+}
+
+.container3 {
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 8rem; 
+    background-color: transparent;
+}
+
+.container4 {
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 8rem; 
+    background-color: transparent;
+}
+
+
+.container2 {
+  width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem; 
+    background-color: transparent;
+
+ 
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bannerImg {
+  width: 100%;
+  height: auto;
+object-fit: cover;
+ object-position: top center;
+}
+
+.footerNav {
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+
+iframe {
+  width: 350px;
+  height: 400px;
+}
+
+small {
+
+  margin-top: 2rem;
+}
+
+}
+
+@media (min-width: 1201px) {
+.light {
+  /* forces light color-scheme */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  color-scheme: light;
+  width: 100%;
+  height: auto; 
+  padding: 8rem;
+}
+.dark {
+  /* forces dark color-scheme */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  color-scheme: dark;
+    width: 100%;
+  height: auto;
+  padding: 8rem;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+   background-color: rgba(36, 33, 33, 0.6);
     position: fixed;
     top: 0;
     left: 0;
@@ -82,9 +618,19 @@ li {
     background-color: transparent;
 }
 
-a {
+a, p {
     text-decoration: none;
     background-color: transparent;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+h2 {
+  font-size: 32px;
 }
 
 section.hero {
@@ -103,15 +649,16 @@ img.heroImg {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;   /* ganz wichtig */
+  height: 100%; 
   object-fit: cover;
   object-position: center center;
-  opacity: 0.9;
+
+    filter: brightness(70%);
 }
 
 
 .heroTitle {
-    width: 70%;
+    width: 100%;
     font-size: 100px;
     z-index: 2;
     color: #F7F4EA;
@@ -141,7 +688,7 @@ img.heroImg {
 a.btn {
   display: inline-block;
   width: 160px;
-  height: 40px;
+  height: 45px;
   line-height: 40px;
   text-align: center;
   background-color: var(--dark-bg);
@@ -149,6 +696,7 @@ a.btn {
   border-radius: 20px;
   font-size: 22px;
   text-decoration: none;
+  font-size: 22px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -159,7 +707,7 @@ a.btn:hover {
 
 
 .container {
-  width: 70%;
+  width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     justify-content: center; 
@@ -169,18 +717,18 @@ a.btn:hover {
 
 .content {
     display: flex;
-    justify-content: flex-start; /* horizontal zentriert im Content */
-    align-items: flex-start;     /* vertikal zentriert im Content */
-    flex-direction: column;  /* Icon über Text */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; 
     gap: 2rem;
     background-color: transparent;
 }
 
 .contentImg {
     display: flex;
-    justify-content: center; /* horizontal zentriert im Content */
-    align-items: flex-end;     /* vertikal zentriert im Content */
-    flex-direction: column;  /* Icon über Text */
+    justify-content: center;
+    align-items: flex-end; 
+    flex-direction: column;
     gap: 2rem;
     background-color: transparent;
    
@@ -188,9 +736,9 @@ a.btn:hover {
 
 .contentIcon {
     display: flex;
-    justify-content: center; /* horizontal zentriert im Content */
-    align-items: center;     /* vertikal zentriert im Content */
-    flex-direction: column;  /* Icon über Text */
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
     gap: 3rem;
     background-color: transparent;
     text-align: center;
@@ -215,7 +763,17 @@ overflow: hidden;
 }
 
 .container3 {
-  width: 70%;
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 8rem; 
+    background-color: transparent;
+}
+
+.container4 {
+  width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     justify-content: center; 
@@ -226,12 +784,12 @@ overflow: hidden;
 
 
 .container2 {
-  width: 70%;
+  width: 100%;
     display: flex;
     justify-content: center; 
     align-items: center;
     flex-direction: column;
-    gap: 15rem; 
+    gap: 8rem; 
     background-color: transparent;
 
  
@@ -260,8 +818,14 @@ object-fit: cover;
 }
 
 
+iframe {
+  width: 500px;
+  height: 500px;
+}
 
 small {
 
   margin-top: 4rem;
+}
+
 }
